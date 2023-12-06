@@ -51,5 +51,4 @@ class customerLogin(View):
 
 
 def customerHome(request):
-    test = 1
     return render(request, 'customerHome.html', {})
