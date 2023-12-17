@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Customer Home</title>
+    <title>Edit User Information</title>
     <style>
         body {
             background-color: #202225;
@@ -14,8 +14,21 @@
         p {
             font: 1rem "Helvetica Now", sans-serif;
         }
+        form {
+            max-width: 300px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+        }
         button {
-            width: 150px;
+            width: auto;
             background-color: #7289da;
             color: white;
             padding: 10px 15px;
@@ -30,13 +43,13 @@
     </style>
 </head>
 <body>
-    <h1>Customer Home</h1>
-    <p>Welcome, {{ username }}!<p>
-    <form method="post" action="{% url 'logout' %}">
+    <h1>Edit User Information</h1>
+    <p>User: {{ username }}</p>
+    <form method="post">
         {% csrf_token %}
-        <button type="submit">Log out</button>
-        <a href="customerEditInfo"><button type="button" formnovalidate>Edit User Info</button></a>
+        {{form.as_p}}
+        <button type="submit">Edit</button>
+        <a href="customerHome"><button type="button" formnovalidate>Back</button></a>
     </form>
-
 </body>
 </html>

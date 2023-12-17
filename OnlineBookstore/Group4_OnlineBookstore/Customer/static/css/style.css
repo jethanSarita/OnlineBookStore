@@ -1,0 +1,36 @@
+button {
+    width: auto;
+    background-color: #7289da;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+button:hover {
+    background-color: #5f76c7;
+}
+select, input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+h1{
+    font: 2rem "Helvetica Now", sans-serif;
+}
+body {
+    background-color: #202225;
+    color: #fff;
+}
+p {
+    font: 1rem "Helvetica Now", sans-serif;
+}
+form {
+    max-width: 300px;
+}

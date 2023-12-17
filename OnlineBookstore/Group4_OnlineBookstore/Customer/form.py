@@ -25,3 +25,16 @@ class customerLoginForm(ModelForm):
     class Meta:
         model = User
         fields = ['username', 'password']
+
+class customerEditInfoForm(ModelForm):
+    firstName = forms.CharField(widget=forms.TextInput)
+    lastName = forms.CharField(widget=forms.TextInput)
+    dateOfBirth = forms.CharField(widget=forms.DateInput)
+    emailAddress = forms.CharField(widget=forms.TextInput)
+    gender_choices = [(0, "Female"), (1, "Male")]
+    gender = forms.ChoiceField(choices=gender_choices, widget=forms.Select)
+
+    class Meta:
+        model = User
+        fields = ['firstName', 'lastName', 'dateOfBirth', 'emailAddress', 'gender']
+

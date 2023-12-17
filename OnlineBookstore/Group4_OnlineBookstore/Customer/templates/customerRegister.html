@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Customer Register</title>
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
     <h1>Register</h1>
@@ -10,6 +11,7 @@
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">Register</button>
+        <a href="/"><button type="button" formnovalidate>Back</button></a>
     </form>
 </body>
 </html>
